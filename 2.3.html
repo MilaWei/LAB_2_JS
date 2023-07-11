@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+</head>
+<body>
+    <label for="username">Логін:</label>
+    <input type="text" id="username">
+    <br>
+    <label for="password">Пароль:</label>
+    <input type="password" id="password">
+    <br>
+    <button onclick="checkCredentials()">Перевірити</button>
+    <p id="message"></p>
+
+    <script>
+        function checkCredentials() {
+            var usernameInput = document.getElementById("username");
+            var passwordInput = document.getElementById("password");
+
+            var username = usernameInput.value;
+            var password = passwordInput.value;
+
+            var message = document.getElementById("message");
+
+            if ((username === "ivan" && password === "333") ||
+                (username === "ssss" && password === "666") ||
+                (username === "gibs" && password === "0000")) {
+                message.textContent = "Ласкаво просимо";
+            } else {
+                message.textContent = "Користувач не знайдений";
+            }
+        }
+    </script>
+</body>
+</html>
